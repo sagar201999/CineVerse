@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: netflix;
+  src: url('/public/fonts/NetflixSans-Light.otf');
+}
+
+.red {
+  background-color: #e50914;
+
+}
+
+h1 {
+  font-family: netflix;
+}

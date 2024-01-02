@@ -1,9 +1,10 @@
-import '../App.css'
+import '../../App.css'
 
-const Home=()=>{
+const Home =()=>{
     return(
         <>
-        <h1>C</h1>
+        <h1>hello</h1>
+        
         </>
     )
 }

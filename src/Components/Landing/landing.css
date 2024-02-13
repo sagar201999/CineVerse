@@ -1,0 +1,378 @@
+* {
+    color: white;
+  /* background-color: transparent; */
+}
+
+html {
+    font-size: 16px;
+}
+
+text-black {
+    background-color: black;
+}
+
+@font-face {
+    font-family: netflix-bold;
+    src: url("../../../public/fonts/NetflixSans-Bold.otf");
+}
+
+
+.landing-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8rem;
+    margin: 0 4rem;
+}
+
+
+
+
+.landing-logo {
+    width: 8rem;
+}
+
+
+.landing-background {
+    background-image: url("../../../public/assets/background-1.jpg");
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.landing-text-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 11rem;
+}
+
+.landing-text-section h1 {
+    font-size: 2.8rem;
+    font-family: netflix-bold;
+}
+
+.landing-text-section h5:nth-child(2) {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.landing-input {
+    width: 40rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: .8rem 0;
+}
+
+.landing-email-input {
+    width: 70%;
+    padding: .9rem;
+    border-radius: 4px;
+    background: transparent;
+}
+
+input::placeholder {
+    color: wheat;
+}
+
+.get-started-button {
+    background-color: rgb(229, 9, 20);
+    border: none;
+    border-radius: 4px;
+    padding: .7rem 1rem;
+    width: auto;
+    font-size: 1.5rem;
+    font-weight: 500;
+
+}
+
+.landing-section-2 {
+    background-color: black;
+}
+
+.section-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5rem 0;
+}
+
+.section-container div {
+    width: 35rem;
+}
+
+.section-container div h1 {
+    font-family: netflix-bold;
+    font-size: 3.2rem;
+}
+
+.section-container div p {
+    font-size: 1.3rem;
+    width: 32rem;
+}
+
+.section-2-image {
+    width: 35rem;
+}
+
+.accordian {
+    width: 90%;
+    margin: auto;
+    padding: 5rem 0;
+}
+
+.szh-accordion__item-btn {
+    background-color: rgb(49, 49, 49);
+    color: white;
+    width: 100%;
+    border: 1px solid white;
+    /* border-radius: 10px 10px 0 0; */
+    padding: 1rem;
+    text-align: left;
+    margin: .3rem 0;
+}
+
+.szh-accordion__item-panel{
+    background-color: rgb(49, 49, 49);
+    width: 100%;
+    padding: 1rem;
+    text-align: left;
+    font-size: 1.1rem;
+    /* border-radius: 0 0 10px 10px; */
+}
+
+
+
+
+
+
+@media screen and (max-width: 1090px) {
+    .section-container div h1 {
+        font-family: netflix-bold;
+        font-size: 3.2rem;
+        text-align: center;
+    }
+    
+    .section-container div p {
+        font-size: 1.3rem;
+        width: 32rem;
+        text-align: center;
+    }
+    
+    .section-2-image {
+        width: 35rem;
+    }
+    
+
+
+}
+
+
+@media screen and (max-width: 936px) {
+
+    .landing-nav {
+        margin: 0 0;
+    }
+
+    .landing-background  {
+        height: 71.5vh;
+    }
+
+    .landing-text-section {
+        margin-top: 6rem;
+    }
+
+    .landing-text-section h1 {
+        font-size: 2rem;
+        margin: .5rem 2rem;
+    }
+
+   .landing-text-section h5 {
+        margin: 1rem 3rem;
+        font-size: 1.1rem;
+    }
+
+    .landing-input {
+        width: 35rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .landing-email-input {
+        width: 62%;
+        padding: .8rem 1rem;
+    }
+
+    .get-started-button {
+        padding: .75rem 1.5rem;
+    }
+
+    .section-container div {
+        text-align: center;
+        width: 35rem;
+
+    }
+
+    .section-container div h1 {
+        font-family: netflix-bold;
+        font-size: 3.2rem;
+        text-align: center;
+    }
+    
+    .section-container div p {
+        font-size: 1.2rem;
+        width: 35rem;
+        text-align: center;
+    }
+
+    .section-2-image {
+        width: 30rem;
+    }
+
+}
+
+
+
+
+
+@media screen and (max-width: 600px) {
+
+    .landing-nav {
+        margin: 0 0;
+    }
+
+    .landing-background  {
+        height: 67.8vh;
+    }
+
+    .landing-text-section {
+        margin-top: 2rem;
+    }
+
+    .landing-text-section h1 {
+        font-size: 2rem;
+        margin: 0 2rem;
+    }
+
+    .landing-text-section h5 {
+        margin: 1.4rem 3rem;
+        font-size: 1.1rem;
+    }
+
+    .landing-input {
+        width: 25rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .landing-email-input {
+        width: 100%;
+        padding: .65rem 1rem;
+    }
+
+    .get-started-button {
+        margin-top: 1rem;
+        padding: .75rem 1.5rem;
+        font-size: 1.2rem;
+    }
+
+    .section-container div h1 {
+        font-family: netflix-bold;
+        font-size: 2.1rem;
+        text-align: center;
+    }
+
+    .section-container div {
+        text-align: center;
+        width: 26rem;
+
+    }
+    
+    .section-container div p {
+        font-size: 1.1rem;
+        width: 27rem;
+        text-align: center;
+    }
+
+    .section-2-image {
+        width: 25rem;
+    }
+
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .landing-nav {
+        margin: 0 0;
+    }
+
+    .landing-logo {
+        width: 100px;
+        height: 30px;
+    }
+
+    .landing-background  {
+        height: 68vh;
+    }
+
+    .landing-text-section {
+        margin-top: 3rem;
+    }
+
+    .landing-text-section h1 {
+        font-size: 1.9rem;
+        margin: 0 2rem;
+    }
+
+    .landing-text-section h5 {
+        margin: 1.4rem 3rem;
+        font-size: 1.1rem;
+    }
+
+    .landing-input {
+        width: 25rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .landing-email-input {
+        width: 100%;
+        padding: .65rem 1rem;
+    }
+
+    .get-started-button {
+        margin: 1rem 0;
+        padding: .75rem 1.5rem;
+        font-size: 1.1rem;
+        font-weight: 700;
+
+    }
+
+    .section-container div {
+        text-align: center;
+        width: 26rem;
+
+    }
+
+    .section-container div h1 {
+        font-family: netflix-bold;
+        font-size: 2rem;
+    }
+    
+    .section-container div p {
+        font-size: 1.1rem;
+        width: 27rem;
+    }
+
+    .section-2-image {
+        width: 25rem;
+    }
+}

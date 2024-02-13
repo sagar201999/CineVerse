@@ -1,80 +1,95 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../../App.css'
-import './Navbar.css'
+import './Home.css'
 import 'bootstrap/dist/css/bootstrap.css'
-import React, { useState, useEffect } from 'react';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faBell } from '@fortawesome/free-regular-svg-icons';
 
 
 
 const Navbar = () => {
 
-    const [isOpen, setIsOpen] = useState(false);
-    const [scrolling, setScrolling] = useState(false);
-
-    const toggleMenu = () => {
-        setIsOpen(!isOpen);
-    };
-
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 100) {
-                setScrolling(true);
-            } else {
-                setScrolling(false);
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
-    const navbarClasses = `navbar navbar-expand-lg navbar-dark fixed-top Suggeste3D ${scrolling ? 'scrolled' : ''}`;
-
 
 
     return (
         <>
-
-            <nav className={navbarClasses}
-                initial={{ y: -300 , opacity: 0}}
-                animate={{ y: 0 , opacity: 1 }}
-                transition={{delay: 1.5 , duration: 2}}
-            >
-                <div className="container">
-                    <a className="navbar-brand " href="/">SAGAR <span className='Tiffany-Blue'>MAGARE</span></a>
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#home">
+                        <img src='../../../assets/logo.png' alt='logo' />
+                    </a>
                     <button
-                        className="navbar-toggler"
+                        class="navbar-toggler"
                         type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarNav"
-                        aria-controls="navbarNav"
+                        data-mdb-toggle="collapse"
+                        data-mdb-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
                         aria-expanded="false"
-                        aria-label="Toggle navigation"
-                        onClick={toggleMenu}
-                    >
-                        <span className="navbar-toggler-icon "></span>
+                        aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
                     </button>
-                    <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`} id="navbarNav">
-                        <ul className="navbar-nav ms-auto">
-                            <li className="nav-item">
-                                <a className="nav-link mx-3" href="#home">HOME</a>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#home">Home</a>
                             </li>
-                            <li className="nav-item">
-                                <a className="nav-link mx-3" href="#about">ABOUT</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#TVShows">TV Shows</a>
                             </li>
-                            <li className="nav-item">
-                                <a className="nav-link mx-3" href="#work">WORK</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Movies">Movies</a>
                             </li>
-                            <li className="nav-item">
-                                <a className="nav-link mx-3" href="#blogs">BLOGS</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#New&Popular">New & Popular</a>
                             </li>
-                            <li className="nav-item">
-                                <a className="nav-link mx-3" href="#contact">CONTACT</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#MyList">My List</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#language">Browse by Language</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div>
+                        <ul className='navbar-nav'>
+                            <li>
+                                <FontAwesomeIcon icon={faSearch} />
+                            </li>
+                            <li>
+                                <a className='nav-link' href='#children'>Children</a>
+                            </li>
+                            <li>
+                                <FontAwesomeIcon icon={faBell} />
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a
+                                    class="nav-link dropdown-toggle"
+                                    href="#a"
+                                    id="navbarDropdown"
+                                    role="button"
+                                    data-mdb-toggle="dropdown"
+                                    aria-expanded="false"   >
+                                    <img src='../../../assets/images.jpg' alt='profile_logo' className='rounded' style={{ width: '30px' }} />
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li>
+                                        <a class="dropdown-item" href="#profile">Manage Profiles</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#transfer">Transfer Profiles</a>
+                                    </li>
+                                    <li><hr class="dropdown-divider" /></li>
+                                    <li>
+                                        <a class="dropdown-item" href="#signout">Sign out of CineVerse</a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
+
+
                 </div>
             </nav>
         </>

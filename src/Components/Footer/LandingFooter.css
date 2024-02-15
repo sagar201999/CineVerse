@@ -1,14 +1,11 @@
-* {
-    background-color: black;
-}
-
 footer {
     padding: 3rem 0;
+    background-color: black;
 }
 
 
 .footer-question {
-    transform: translateX(7.8rem);
+    margin-left: 7.8rem;
 }
 
 .footer-container {
@@ -37,10 +34,10 @@ footer {
 }
 
 
-@media screen and (max-width: 784px) {
+@media screen and (max-width: 999px) {
 
     .footer-question {
-        transform: translateX(5rem);
+        margin-left: 5rem;
     }
 
     

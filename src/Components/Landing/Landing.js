@@ -2,6 +2,7 @@ import './landing.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Accordion, AccordionItem } from '@szhsin/react-accordion';
 import LandingFooter from '../Footer/LandingFooter';
+import { Link } from 'react-router-dom';
 
 const Landing = () => {
 
@@ -12,7 +13,7 @@ const Landing = () => {
                     <div className='landing-nav'>
                         <img src="../../../assets/logo.png" alt='logo' className='landing-logo' />
                         <div>
-                            <button className='btn btn-primary me-2 px-2 py-1'>Lang</button>
+                            <button className='btn border text-light me-2 px-2 py-1'>Lang</button>
                             <button className='btn btn-danger px-3 py-1'>Sign In</button>
                         </div>
                     </div>
@@ -22,7 +23,9 @@ const Landing = () => {
                         <h5 className='mt-2'>Ready to watch? Enter your email to create or restart your membership.</h5>
                         <div className='landing-input'>
                             <input type='text' placeholder='Email address' className='landing-email-input' />
-                            <button className='get-started-button' >Get Started &gt;</button>
+                            <Link to={'/Home'} >
+                                <button className='get-started-button' >Get Started &gt;</button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -86,8 +89,8 @@ const Landing = () => {
                         </AccordionItem>
 
                         <AccordionItem header="How Much cineverse Cost?">
-                           <p> Watch cineverse on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one for free of charge.
-                              No extra costs, no contracts.</p>
+                            <p> Watch cineverse on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one for free of charge.
+                                No extra costs, no contracts.</p>
                         </AccordionItem>
                     </Accordion>
 

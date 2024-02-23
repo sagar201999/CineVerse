@@ -1,0 +1,41 @@
+.series_content {
+    background-color: black;
+    font-family: netflix;
+}
+
+.box{
+    position: relative;
+    z-index: 1;
+    padding: 1.5rem 0;
+}
+
+.content_wrapper {
+    width: 95%;
+    margin: auto;
+}
+
+
+.content {
+    width: 227px !important; 
+    height: 127px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.slick-slide {
+    width: 235px !important;
+}
+
+.slick-arrow {
+    opacity: 0;
+}
+
+.content-heading {
+    margin-left: 2.4rem;
+}
+
+
+@font-face {
+    font-family: netflix;
+    src: url('../../../public/fonts/NetflixSans-Regular.otf');
+}

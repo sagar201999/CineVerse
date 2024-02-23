@@ -1,0 +1,55 @@
+@font-face {
+    font-family: netflix;
+    src: url('../../../public/fonts/NetflixSans-Light.otf');
+}
+
+
+.logo {
+    width: 110px;
+}
+
+.navbar {
+    background-color: transparent;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+    font-family: netflix;
+  }
+  
+  .navbar.scrolled {
+    background-color: #000000;
+    box-shadow: 0 2px 4px rgba(35, 35, 35, 0.1);
+    /* Add desired box-shadow */
+  }
+
+  .navbar-collapse {
+    animation: slideDown 0.5s ease-in-out;
+  }
+  
+  .navbar-nav .nav-item .nav-link {
+    color: rgb(233, 233, 233);
+    font-size: .9rem;
+  }
+  
+  .navbar-nav .nav-item .nav-link:hover {
+    color: #abaaaa;
+  }  
+
+  .nav-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 8rem;
+  }
+
+  .search ,
+  .bell {
+    font-size: 1.5rem;
+  }
+
+  .profile_pic {
+    width: 30px;
+    border-radius: 5px;
+  }
